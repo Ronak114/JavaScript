@@ -7,7 +7,7 @@ const regNo = 2021022
 let email = "abc@gmail.com"
 var emailPass = "12345"
 
-//Another way ..not preferable
+//Another way (not preferable)
 city = "Ahmedabad"
 
 //initialization
