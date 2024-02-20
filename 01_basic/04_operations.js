@@ -14,10 +14,10 @@ let str1="hello"
 let str2=" Ronak"
 console.log(str1 + str2);
 
-console.log("1" + 2);
-console.log(1 + "2");
-console.log("1" + "2");
-console.log(1 + 2);
+console.log("1" + 2); // OP ->12
+console.log(1 + "2"); // OP ->12
+console.log("1" + "2"); //OP -> 12
+console.log(1 + 2); 
 console.log(1 + 2 + "2"); //OP - 32
 console.log("1" + 2 + 2); //OP - 122
 // ********** ECMA **********
