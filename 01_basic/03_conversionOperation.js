@@ -1,14 +1,14 @@
+//Conversion Operations.(typeof)
 let score = "33"; //string
-
 console.log(typeof score); // OP - string
 // console.log(typeof (score));
 
-let valInNumber = Number(score); //like typecasting
+let valInNumber = Number(score); //like typecasting in python
 console.log(typeof valInNumber); // OP - number
-console.log(" ");
 
 let score1 = "33abc";
 console.log(typeof score1); // OP - string
+console.log(" ");
 
 let valInNumber1 = Number(score1); 
 console.log(typeof valInNumber1);
@@ -59,4 +59,4 @@ console.log(" ");
 //"33"-->33
 //"33abc"-->NAN
 // true -->1 ; false -->0 or vicecers
-// "Ronak"--1 ; empty -->0
+// "Ronak"-->1 ; empty -->0
