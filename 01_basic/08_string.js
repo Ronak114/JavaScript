@@ -41,4 +41,3 @@ console.log(url.includes('Roo'));
 //To convert it into array
 const Name ="Ronak-Dipak-Pawar";
 console.log(Name.split("-"));
-console.log(Name.split("-"));
