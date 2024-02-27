@@ -28,8 +28,4 @@ if (true) {
 }
 console.log(d)
 
-
-
-
-// console.log(d)
-// console.log(e)
+// var is global variable
