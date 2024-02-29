@@ -1,5 +1,5 @@
 // forof loop
-const myArr = ["a","b","c","d"]
+const myArr = ["a", "b", "c", "d"]
 for (const i of myArr) {
     console.log(i);
 }
@@ -11,9 +11,9 @@ for (const i of msg) {
 
 //Maps..unique value/object/same seq
 const map = new Map()
-map.set('IN' , "India")
-map.set('SL' , "Sri Lanka")
-map.set('IN' , "India")
+map.set('IN', "India")
+map.set('SL', "Sri Lanka")
+map.set('IN', "India")
 console.log(map); // OP -> Obj
 
 //loop on map
@@ -22,6 +22,17 @@ for (const i of map) {
 }
 
 //another way
-for (const [key,value] of map) {
-    console.log(key,'-', value);
+for (const [key, value] of map) {
+    console.log(key, '-', value);
 }
+
+// //forof Loop on object
+// const myObj = {
+//     'game1': "FootBall",
+//     'game2': "Basketball",
+// }
+
+// for (const i of myObj) {
+//     console.log(i);
+// }
+// //Error : Not iterable
