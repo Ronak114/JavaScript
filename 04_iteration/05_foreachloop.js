@@ -10,9 +10,9 @@ const lang = ["html", "css", "js", "java", "python"]
 // })
 
 //Using arrow funtn
-lang.forEach((item,index,arr) => {
-    console.log(item,index,arr);
-} )
+lang.forEach((item, index, arr) => {
+    console.log(item, index, arr);
+})
 
 // // By reference
 // function printMe(val) {
@@ -20,21 +20,31 @@ lang.forEach((item,index,arr) => {
 // }
 // lang.forEach(printMe)
 
-const sample =[
-{
-    state : "Maha",
-    city : "Mumbai",
-},
-{
-    state : "TN",
-    city : "Chennai",
-},
-{
-    state : "Goa",
-    city : "Panaji",
-},
+const sample = [
+    {
+        state: "Maha",
+        city: "Mumbai",
+    },
+    {
+        state: "TN",
+        city: "Chennai",
+    },
+    {
+        state: "Goa",
+        city: "Panaji",
+    },
 ]
 
 sample.forEach((item) => {
     console.log(item.state);
 })
+
+// New Conept
+// const lang = ["html", "css", "js", "java", "python"]
+
+// const values = lang.forEach((i) => {
+//     console.log(i);
+//     return i
+// })
+// console.log(values);
+// //for each will never return a val
