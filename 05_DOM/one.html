@@ -1,10 +1,10 @@
 <!-- Document Object Model -->
+<!-- obj => head , body -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Learning</title>
     <style>
         .bg-black {
@@ -16,7 +16,8 @@
 
 <body class="bg-black">
     <div>
-        <h1 id="title">DOM</h1>
+        <h1 id="title">DOM <span style="display: none;"> test text</span>
+        </h1>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
     </div>
 
@@ -26,15 +27,23 @@
 
 <!-- Commands
 1. (window)
-2. (window.documents)
-3. dir(document)
-4. document.___
-    a.getElementByid().innerHTML = " "
-5. document.getElementById("title")
-6. document.getElementById("title").id
-7. document.getElementById("title").className
-8. document.getElementById("title").getAttribute('id')
-9. document.getElementById("title").setAttribute('id') mention both it will override it
- -->
+2. (window.document)
+3. (document.links) => HTMLCollection not array
+4. dir(document)
+5. document.___
+    a. getElementById().innerHTML = " "
+6. document.getElementById("parameter")
+    a. document.getElementById("title").id
+    b. document.getElementById("title").className ....not class
+7. document.getElementById("title").getAttribute('id')
+8. document.getElementById("title").getAttribute('class')
+9. document.getElementById("title").setAttribute('id') ....mention both it will override it
 
- <!-- #deecf7 -->
+10.const title = document.getElementById('title') .....storing value at var title.
+    a. title.style.backgroundColor = '' ...... added color
+    b. title.textContent...to get pura content
+    b. title.innerHTML...it gives whole html value
+    b. title.innerText...to get visible text
+
+
+ -->
