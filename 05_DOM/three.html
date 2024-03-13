@@ -1,0 +1,35 @@
+// appending a child to parent
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body style="background-color: black;color: aliceblue;">
+
+</body>
+
+<script>
+    //to create any element
+    const d1 = document.createElement('div')
+    console.log(d1);
+    //to set value (class name,id)
+    d1.className = "main"
+    d1.id = Math.round(Math.random() * 10)
+
+    d1.setAttribute("title", "newTitle") //directly select krta hai
+    d1.style.backgroundColor = "blue"
+    // d1.innerText = "Placement broo" //override (not preferred)
+
+    //apending
+    const addText = document.createTextNode("Youtube")
+    d1.appendChild(addText)
+
+    //attachment
+    document.body.appendChild(d1)
+</script>
+
+</html>
