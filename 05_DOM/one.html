@@ -18,7 +18,15 @@
     <div>
         <h1 id="title">DOM <span style="display: none;"> test text</span>
         </h1>
+        <h2>hiiii</h2>
+        <h2>hellloooo</h2>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <input type="password" name="" id="">
+        <ul>
+            <li class="number">one</li>
+            <li class="number">two</li>
+            <li class="number">three</li>
+        </ul>
     </div>
 
 </body>
@@ -45,5 +53,31 @@
     b. title.innerHTML...it gives whole html value
     b. title.innerText...to get visible text
 
+11.To select individual element
+    a. querySelector('h1')....gives 1st h1
+    b. querySelector('.bg-black')....gives class
+    c. document.querySelector('input[type="password"]')
+    d. other selectors(CSS-Selector) : passowrd
+    e. const myul = document.querySelector('ul')
+    f. const turngreen = myul.querySelector('li')
+    g. turngreen.style.backgroundColor = 'green'
 
+12.To select multiple
+    a. const templi = document.querySelectorAll('li')
+    b. templi[0].style.color = "red"
+    c. templi.forEach(function (l){
+            l.style.backgroundColor = "blue"
+            })
+    d. const mylist = document.getElementsByClassName('number')
+        Array.from(mylist)
+ -->
+
+ <!-- 
+1. # => id
+2. .=>class
+3. ul>li*3
+4. querySelectorALL =>Nodelist(!pure array)
+5. check prototype.if map then array
+6. NodeList => forEach
+7. Array.from(mylist).....covert into array
  -->
