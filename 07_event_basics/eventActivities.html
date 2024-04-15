@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Events</title>
+</head>
+
+<body style="background-color: aquamarine;">
+    <h1>Images</h1>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="ocean" src="/images.jpg" alt="error"></li>
+            <li><img width="200px" id="nature" src="/istockphoto-1317323736-612x612.jpg" alt="error"></li>
+            <li><img width="200px" id="dog" src="/pexels-chevanon-photography-1108099.jpg" alt="error"
+                    onclick="alert('puppy')"></li>
+            <!-- 1. wrong approach,prblm while scaling and js in html -->
+            <li><img width="200px" id="wall" src="/pexels-pixabay-276514.jpg" alt="error"></li>
+            <li><a href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // 1. On click image should be removed.
+    document.querySelector('#images').addEventListener('click', function (e) {
+        // console.log(e.target);
+        // whole parent(li) need to be removed otherwise bullet point will be there that's Y we ues parentNode.
+        console.log(e.target.parentNode);
+        console.log(e.target.tagName);
+        if (e.target.tagName == 'IMG') {
+            let removeIt = e.target.parentNode;
+            // 1.(more preferable)
+            removeIt.remove();
+        }
+        // 2. --> method removeChild
+        removeIt.parentNode.removeChid(removeIt);
+    }, false)
+</script>
+
+</html>
