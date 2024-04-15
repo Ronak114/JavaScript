@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Events</title>
+</head>
+<body style = "background-color: aquamarine;">
+    <h1>Images</h1>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="ocean" src="/images.jpg" alt="error"></li>
+            <li><img width="200px" id="nature" src="/istockphoto-1317323736-612x612.jpg" alt="error"></li>
+            <li><img width="200px" id="dog" src="/pexels-chevanon-photography-1108099.jpg" alt="error" onclick="alert('puppy')"></li>
+            <!-- 1. wrong approach,prblm while scaling and js in html -->
+            <li><img width="200px" id="wall" src="/pexels-pixabay-276514.jpg" alt="error"></li>
+            <li><a href="https.google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    document.getElementById('wall').onclick = function(){
+        alert('wall') 
+    }
+    // 2. again not a good aproach..EventListener provide onclick + propagation
+
+    // 3.best approach ...event propagation --> 2 contex. 1.event Bubbling(default, false) 2.event capturing
+    document.getElementById('nature').addEventListener('click',function(){  alert('nature') },false)
+    // attachEvent
+    // jQuery - on
+
+    //event object (e)
+    document.getElementById('ocean').addEventListener('click',function(e){
+       // console.log(e);
+    },false)
+
+    // extra padhna hai
+    // type , timestamp , defaultPrevented
+    // target , toElement , srcElement ,currentTergte
+    // clientX , clientY ,screenX , screenY
+    // altkey , ctrlkey,shiftkey , keyCode
+
+
+    // 1.event Bubbling (inside se outside)
+    document.getElementById('images').addEventListener('click',function(e){
+        console.log("clicked inside ul");
+    },false)
+
+    document.getElementById('ocean').addEventListener('click',function(e){
+        console.log("clicked ocean");
+        e.stopPropagation(); //aage or propagate mhi hota
+    },false)
+
+    // // 2.event capturing (outside se inside)
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("clicked inside ul");
+    // },true)
+
+    // document.getElementById('ocean').addEventListener('click',function(e){
+    //     console.log("clicked ocean");
+    // },true)
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.defaultPrevented()
+    //     console.log("google clicked");
+    // },false)
+
+
+
+</script>
+</html>
+<!-- in js events run sequencially .
+sometimes, asyncronus.
+ex: event (works on some action) -->
