@@ -14,7 +14,7 @@
             <li><img width="200px" id="dog" src="/pexels-chevanon-photography-1108099.jpg" alt="error" onclick="alert('puppy')"></li>
             <!-- 1. wrong approach,prblm while scaling and js in html -->
             <li><img width="200px" id="wall" src="/pexels-pixabay-276514.jpg" alt="error"></li>
-            <li><a href="https.google.com" id="google">Google</a></li>
+            <li><a href="https://google.com" id="google">Google</a></li>
         </ul>
     </div>
 </body>
@@ -60,12 +60,10 @@
     //     console.log("clicked ocean");
     // },true)
 
-    // document.getElementById('google').addEventListener('click',function(e){
-    //     e.defaultPrevented()
-    //     console.log("google clicked");
-    // },false)
-
-
+    document.getElementById('google').addEventListener('click',function(e){
+        e.preventDefault();
+        console.log("google clicked");
+    },false)
 
 </script>
 </html>
