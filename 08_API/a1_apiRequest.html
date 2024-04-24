@@ -1,0 +1,53 @@
+<!-- Prsently using FETCH -->
+<!-- xml ki req = "AJAX req" in past -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    0	UNSENT	Client has been created. open() not called yet. <br>
+1	OPENED	open() has been called. <br>
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available. <br>
+3	LOADING	Downloading; responseText holds partial data. <br>
+4	DONE	The operation is complete. <br>
+</body>
+<script>
+    // XMLHttpRequest -->it is a object to send data and receive it.
+    // open will send the req
+  
+    const requestUrl = 'https://api.github.com/users/Ronak114'
+
+    const xhr = new XMLHttpRequest(); // object created
+    xhr.open('GET', requestUrl) // open but need to call and has 2 parameters.
+
+    // to check req is sent or not....sent
+    // console.log("here");
+    // console.log(xhr.readyState);..to give state no.
+
+    // as state changes the function will print state no.
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+
+        if (xhr.readyState === 4) {
+            console.log(this.responseText); // --> show whole api response.
+
+            const data = this.responseText
+            console.log(data.name); // op undefined
+            console.log(typeof data); // most of the time response is in STRING.
+
+            // Need to convert it into json(bcz json data)
+            // Parse change string into json.
+
+            const dataa = JSON.parse(this.responseText)
+            console.log(typeof dataa);
+            console.log(dataa.name);
+        }
+    }
+    xhr.send();
+</script>
+</html>
+
+<!-- assig : on button it should give me my name -->

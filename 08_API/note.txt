@@ -1,0 +1,32 @@
+/*******API - Application Programming Interface.**************/
+    - taking bridge
+
+1. Messanger.
+2. EX - google api (google map api)
+3. Security Key - provide monitoring
+                - limited req
+
+4. To communicate(internal communication) betn diff lang is not easy - PROTOCOL AND DATA
+5. API provide - PROTOCOL and DATA
+
+1. github.
+https://api.github.com/users/Ronak114 
+
+2.OPEN SOURCE API TO GENERATE RANDOM DATA.
+https://randomuser.me/
+
+3. TO READ/UNDERSTAND API.
+https://jsonformatter.org/
+
+
+/****************CONSOLE LOG ***************************/
+1.Is document , console part of js ? 
+-- yes bhi and no bhi.
+-- not the basic part.
+
+2.console.log -> debugging/dev tool
+-- d8-console.cc(v8 REPO on GITHUB)
+
+js...run time env
+1.browser
+2.nodejs..implementation of v8(engine in c++)
