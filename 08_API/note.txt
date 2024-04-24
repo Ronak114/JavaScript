@@ -30,3 +30,6 @@ https://jsonformatter.org/
 js...run time env
 1.browser
 2.nodejs..implementation of v8(engine in c++)
+
+/****************PROMISE ***************************/
+1. Eventual completion of an asyn operation and resulting val.
