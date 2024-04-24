@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hello there !</h1>
+    <button id="stop"> Stop </button>
+</body>
+<script>
+    //TASK : perform the task one time after given time(2 sec)
+
+    // setTimeout(function(){
+    //     console.log("Ronak");
+    // },2000);
+
+    const sayName = function () {
+        console.log("Ronak");
+    }
+
+    const changeText = function () {
+        document.querySelector('h1').innerHTML = "How are you ???";
+    }
+
+    setTimeout(sayName, 2000);
+    const changeMe = setTimeout(changeText, 4000);
+
+    // clearTimeout need reference.
+    // here if we click stop button the h1 will not change.
+    document.querySelector('#stop').addEventListener('click', function () {
+        clearTimeout(changeMe)
+        console.log("STOPPED");
+    })
+</script>
+
+</html>
